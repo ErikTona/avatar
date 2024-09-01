@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Avatar</title>
+</head>
+<body>
+    <canvas id="avatar" width="800" height="600"></canvas>
+
+    <script>
+       //Se supone que lo que esta arriba de los ojos y la boca azul es fuego azul :)
+
+        const canvas = document.getElementById("avatar");
+        const ctx = canvas.getContext("2d");
+
+        
+        ctx.fillStyle = "purple";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        
+        ctx.arc(400, 200, 100, 0, Math.PI * 2, true);
+        ctx.fillStyle="white";
+        ctx.strokeStyle = "black";  
+        ctx.lineWidth = 5;  
+        ctx.stroke();
+        ctx.fill();
+
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.moveTo(320, 170); 
+        ctx.quadraticCurveTo(400, 50, 480, 170); 
+        ctx.lineTo(460, 240);
+        ctx.quadraticCurveTo(400, 210, 340, 240);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(320, 170);
+        ctx.quadraticCurveTo(400, 50, 480, 170);
+        ctx.lineTo(460, 240);
+        ctx.quadraticCurveTo(400, 210, 340, 240);
+        ctx.closePath();
+        ctx.stroke();
+
+        ctx.fillStyle = "blue";
+        ctx.beginPath();
+        ctx.arc(370, 180, 10, 0, Math.PI * 2, true); 
+        ctx.arc(430, 180, 10, 0, Math.PI * 2, true); 
+        ctx.fill();
+
+
+
+        ctx.fillStyle = "cyan";
+        ctx.beginPath();
+        ctx.moveTo(365, 170); 
+        ctx.quadraticCurveTo(370, 160, 375, 170);
+        ctx.quadraticCurveTo(370, 175, 365, 170);
+        ctx.fill();
+
+
+        ctx.beginPath();
+        ctx.moveTo(425, 170); 
+        ctx.quadraticCurveTo(430, 160, 435, 170);
+        ctx.quadraticCurveTo(430, 175, 425, 170);
+        ctx.fill();
+
+
+        
+        ctx.beginPath();
+        ctx.moveTo(370, 240);
+        ctx.quadraticCurveTo(400, 260, 430, 240);
+        ctx.quadraticCurveTo(400, 250, 370, 240);
+        ctx.fill();
+
+
+
+        
+        ctx.fillStyle = "cyan";
+        ctx.beginPath();
+        ctx.moveTo(390, 235); 
+        ctx.quadraticCurveTo(400, 225, 410, 235);
+        ctx.quadraticCurveTo(400, 245, 390, 235);
+        ctx.fill();
+
+       
+        ctx.fillStyle = "blue";
+        ctx.beginPath();
+        ctx.moveTo(300, 300); 
+        ctx.lineTo(500, 300); 
+        ctx.lineTo(570, 450); 
+        ctx.lineTo(230, 450); 
+        ctx.closePath();
+        ctx.fill();
+
+        
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.moveTo(300, 300); 
+        ctx.lineTo(320, 350); 
+        ctx.lineTo(480, 350); 
+        ctx.lineTo(500, 300); 
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.strokeStyle = "black";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(300, 300);
+        ctx.lineTo(500, 300);
+        ctx.lineTo(570, 450);
+        ctx.lineTo(230, 450);
+        ctx.closePath();
+        ctx.stroke();
+
+       
+
+        ctx.fillStyle = "white"; 
+        ctx.font = "30px Arial"; 
+        ctx.fillText("Airhead", 340, 50); 
+
+        ctx.fillStyle = "white"; 
+        ctx.font = "30px Arial"; 
+        ctx.fillText("Erik Tonatiuh Estrada Zuñiga", 210, 500); 
+    </script>
+</body>
+</html>
